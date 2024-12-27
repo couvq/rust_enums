@@ -26,4 +26,10 @@ fn main() {
         Some(x) => println!("Got a value: {}", x),
         None => println!("No value"),
     };
+
+    let dice_roll = 6;
+    match dice_roll {
+        1..=6 => println!("Got a number between 1 and 6"),
+        _ => println!("Got something else"),
+    }
 }
