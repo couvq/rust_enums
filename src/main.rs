@@ -32,4 +32,13 @@ fn main() {
         1..=6 => println!("Got a number between 1 and 6"),
         _ => println!("Got something else"),
     }
+
+    let max = Option::Some(10);
+    if let Some(x) = max {
+        println!("Got a value: {}", x);
+    }
+    if let None = max {
+        println!("No value");
+    } // can also write this way but we lose the exhaustive check benefits of match expressions
+    // pretty much a match where we only have an arm for one value and we ignore all the rest
 }
